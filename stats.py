@@ -10,9 +10,14 @@ def get_book_text(path_to_file):
         file_contents = f.read()
     return (file_contents)
 
-def main():
-    number = count_words("books/frankenstein.txt")
-    print (number)
-    
+def char_count(path):
+    text= get_book_text(path).lower()
+    characters_dictionary = {}
+    for character in text:
+        if character not in characters_dictionary:
+            characters_dictionary[character] = 1 
+        else:
+            characters_dictionary[character] += 1
+    return characters_dictionary
 
-main()
+
