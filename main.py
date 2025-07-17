@@ -1,7 +1,10 @@
 from stats import count_words
 from stats import char_count
 from stats import sorted_dictionaries_list
+import sys
 
+
+#def generic_use():
 
 
 
@@ -17,6 +20,11 @@ def main(path):
 
     return 
     
+if len(sys.argv) <= 1:
+    print ("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+else:
+    path = sys.argv[1]
+    print (main(path))
 
-
-main ("books/frankenstein.txt")
+# main ("books/frankenstein.txt") #Made a comment just for testing purposes
