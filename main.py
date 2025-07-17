@@ -5,7 +5,8 @@ import sys
 
 def main():
     if len(sys.argv) != 2:
-        raise Exception("Usage: python3 main.py <path_to_book>")
+        print ("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     path = sys.argv[1]
     print ("============ BOOKBOT ============")
     print (f"Analyzing book found at {path}")
@@ -19,8 +20,4 @@ def main():
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as input_error:
-        print (input_error)
-        sys.exit(1)
+    main()
